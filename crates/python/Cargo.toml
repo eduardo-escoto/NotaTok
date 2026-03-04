@@ -1,0 +1,13 @@
+[package]
+name = "notatok-python"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "notatok"
+crate-type = ["cdylib"]
+
+[dependencies]
+notatok-core = { path = "../core" }
+pyo3 = { version = "0.23", features = ["extension-module"] }
+anyhow = { workspace = true }

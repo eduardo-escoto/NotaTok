@@ -1,0 +1,18 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "notatok"
+requires-python = ">=3.9"
+version = "0.1.0"
+description = "Python bindings for notatok — audio/MIDI tokenizer"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[tool.maturin]
+manifest-path = "crates/python/Cargo.toml"
+python-source = "python"
+features = ["pyo3/extension-module"]

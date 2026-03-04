@@ -1,0 +1,10 @@
+[package]
+name = "notatok-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core logic for notatok"
+
+[dependencies]
+serde = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }

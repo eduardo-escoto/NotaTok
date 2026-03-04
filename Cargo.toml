@@ -1,0 +1,19 @@
+[workspace]
+members = [
+    "crates/core",
+    "crates/cli",
+    "crates/python",
+]
+# Build core+cli with `cargo build`; python bindings require `maturin develop`
+default-members = [
+    "crates/core",
+    "crates/cli",
+]
+resolver = "2"
+
+[workspace.dependencies]
+# Shared deps — pin versions here, reference with { workspace = true } in crates
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+anyhow = "1"

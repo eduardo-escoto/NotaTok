@@ -1,0 +1,14 @@
+[package]
+name = "notatok"
+version = "0.1.0"
+edition = "2021"
+description = "CLI for notatok"
+
+[[bin]]
+name = "notatok"
+path = "src/main.rs"
+
+[dependencies]
+notatok-core = { path = "../core" }
+clap = { version = "4", features = ["derive"] }
+anyhow = { workspace = true }
