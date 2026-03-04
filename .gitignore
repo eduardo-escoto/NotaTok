@@ -2,7 +2,7 @@
 # Rust
 # =============================================================================
 /target/
-# Cargo.lock is committed — this project has a binary crate (notatok CLI)
+# Cargo.lock  # uncomment if publishing a library-only crate to crates.io
 
 # =============================================================================
 # Python

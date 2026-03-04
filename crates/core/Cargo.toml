@@ -3,6 +3,7 @@ name = "notatok-core"
 version = "0.1.0"
 edition = "2021"
 description = "Core logic for notatok"
+license = "MIT"
 
 [dependencies]
 serde = { workspace = true }
