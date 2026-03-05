@@ -9,3 +9,4 @@ license = "MIT"
 serde = { workspace = true }
 thiserror = { workspace = true }
 anyhow = { workspace = true }
+midly = { workspace = true }
