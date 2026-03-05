@@ -1,3 +1,6 @@
+pub mod abc;
+pub mod compound;
+pub mod midi_like;
 pub mod remi;
 
 use crate::midi::Score;

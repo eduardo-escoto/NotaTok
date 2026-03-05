@@ -3,7 +3,7 @@ use thiserror::Error;
 pub mod midi;
 pub mod tokenizer;
 
-pub use midi::{Note, Score, TempoChange, TimeSignatureChange, Track};
+pub use midi::{load_midi, save_midi, Note, Score, TempoChange, TimeSignatureChange, Track};
 pub use tokenizer::Tokenizer;
 
 #[derive(Debug, Error)]

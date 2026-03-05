@@ -1,6 +1,8 @@
 pub mod load;
+pub mod save;
 
 pub use load::load_midi;
+pub use save::save_midi;
 
 use serde::{Deserialize, Serialize};
 
@@ -20,7 +22,7 @@ pub struct Note {
 }
 
 /// A tempo change event. Default MIDI tempo is 500 000 µs/beat (120 BPM).
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub struct TempoChange {
     pub tick: u64,
     /// Microseconds per beat.
@@ -32,7 +34,7 @@ pub struct TempoChange {
 /// `denominator` is stored as a power of 2, exactly as the SMF spec and midly
 /// represent it. Actual denominator = `1 << denominator`.
 /// For example, 4/4 → numerator=4, denominator=2 (2^2 = 4).
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub struct TimeSignatureChange {
     pub tick: u64,
     pub numerator: u8,
